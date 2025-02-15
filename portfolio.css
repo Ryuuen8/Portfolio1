@@ -27,7 +27,7 @@
   justify-content: center; 
 }
 
-.links a button {
+.links button {
   background: transparent;
   border: 2px solid white;
   color: white;
@@ -37,22 +37,20 @@
   transition: all 0.3s ease-in-out;
 }
 
-.links a button:hover {
+.links button:hover {
   background: white;
   color: black;
 }
 
-/* Ensure the body doesn't hide the top of the page */
 body {
-  margin-top: 70px; 
+  margin-top: 70px;
   background: linear-gradient(135deg, #0f172a, #1e293b);
   color: white;
-  overflow-x: hidden;
   scroll-snap-type: y mandatory;
+  overflow-x: hidden; /* Prevents horizontal scrolling issues */
 }
 
-
-
+/* Background Glow */
 .background-glow {
   position: absolute;
   width: 300px;
@@ -61,6 +59,7 @@ body {
   filter: blur(120px);
   animation: float 6s infinite alternate ease-in-out;
   z-index: -1;
+  transform: translate(-50%, -50%);
 }
 
 .glow-1 { top: 5%; left: 10%; }
@@ -85,7 +84,10 @@ section {
 
 /* Home Section */
 #homeSec {
-  display: flex;
+  background-image: url('lptp.png');
+  background-size: 600px;
+  background-position: left;
+  background-repeat: no-repeat;
   flex-direction: column;
   align-items: center;
   gap: 15px;
@@ -108,15 +110,14 @@ section {
 
 /* About Me Section */
 #aboutSec {
-  background: linear-gradient(135deg, #0f172a, #1e293b);
   padding: 40px;
 }
 
-/* Container for About Me Content */
 .about-container {
   display: flex;
+  flex-wrap: wrap; 
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
   max-width: 1200px;
   background: rgba(255, 255, 255, 0.05);
@@ -145,10 +146,6 @@ section {
   margin-bottom: 20px;
 }
 
-.about-text p:last-of-type {
-  margin-bottom: 0;
-}
-
 /* About Skills & Experience (Right side) */
 .about-skills {
   width: 35%;
@@ -171,30 +168,138 @@ section {
 
 .about-skills ul li {
   font-size: 16px;
-  opacity: 0.9;
+  opacity: 1; 
   margin: 10px 0;
+  transition: color 0.3s ease, transform 0.2s ease;/
 }
 
-/* Hover Effect for Skills */
 .about-skills ul li:hover {
-  color: #f0f0f0;
-  transition: color 0.3s ease;
+  color: #ff79c6; 
+  transform: translateX(5px); 
 }
+
 
 /* Blog Card */
 .card-container {
+  height: 80vh;
+  width: 75vh;
   padding: 30px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   backdrop-filter: blur(8px);
   box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card-container .img-property {
+  height: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-container .img-property img {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card-container .img-property img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+}
+
+.txt-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-left: 160px;
+  padding: 10px;
+  width: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.txt-container img{
+ position: absolute;
+ left: 10px; 
+}
+
+.txt-container a {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.txt-container a:hover {
+  color: #ff79c6;
+}
+
+.project-container {
+  gap: 20px;
+  margin-top: 20px;
+  display: flex;
+}
+.card-container .Project-text {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.project-container .project-1 {
+  flex: 1;
+  padding: 30px;
+  height: 270px;
+  width: 270px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-container .project-1:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+.project-container .project-1 img {
+  height: 80px;
+}
+
+.project-container .project-2 {
+  flex: 1;
+  padding: 30px;
+  height: 270px;
+  width: 270px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-container .project-2 img {
+  height: 80px;
+}
+
+.project-container .project-2:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
 }
 
 .card-container:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
 }
+
 
 /* Footer */
 .footer {
@@ -210,7 +315,7 @@ section {
     padding: 10px 0;
   }
 
-  .links a button {
+  .links button {
     padding: 8px 16px;
     font-size: 14px;
   }
@@ -257,7 +362,7 @@ section {
 
 @media (max-width: 480px) {
   /* Navigation Bar */
-  .links a button {
+  .links button {
     padding: 6px 12px;
     font-size: 12px;
   }

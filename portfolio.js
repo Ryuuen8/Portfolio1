@@ -10,16 +10,14 @@ $(document).ready(function() {
         }
     });
 
-    // Fade-in effect for sections
     $(window).on("scroll", function() {
-        $(".card-container, .content-container").each(function() {
+        $(".card-container").each(function() {
             var position = $(this).offset().top;
             var windowHeight = $(window).height();
             var scrollTop = $(window).scrollTop();
-
+    
             if (position < scrollTop + windowHeight - 50) {
-                $(this).css("opacity", "1");
-                $(this).css("transform", "translateY(0)");
+                $(this).addClass("fade-in");
             }
         });
     });
