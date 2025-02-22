@@ -6,23 +6,12 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="portfolio.css" />
     <link rel="icon" href="allen.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
     <script src="portfolio.js"></script>
-    <script src="three.r134.min.js"></script>
-    <script src="vanta.halo.min.js"></script>
-    <script>
-      VANTA.HALO({
-        el: "#about-sec",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.0,
-        minWidth: 200.0,
-      });
-    </script>
   </head>
   <body>
     <div class="background-glow glow-1"></div>
@@ -43,7 +32,9 @@
       <div class="background-glow glow-2"></div>
       <div class="background-glow glow-3"></div>
       <div class="texthome-container">
-        <h1>Hi, I'm Bryan</h1>
+        <div class="glitch" data-glitch="Hello, I'm Bryan">
+          Hello, I'm Bryan
+        </div>
         <h2>Aspiring Back End Developer</h2>
         <p>
           "Hi, I'm Bryan, an aspiring Back-End Developer passionate about
@@ -87,30 +78,40 @@
     </section>
 
     <section id="blogSec">
+      <!--<div class="box-wrapper">
+        <div class="box-sec">
+          <div class="box-container">
+            <h1>Most of my Projects are on my github feel free to check them out</h1>
+          </div>
+        </div>
+      </div>-->
       <div class="background-glow glow-1"></div>
       <div class="background-glow glow-2"></div>
       <div class="background-glow glow-3"></div>
-      <div class="card-container">
-        <div class="img-property">
-          <img src="wth.png" alt="" />
-        </div>
-        <div class="txt-position">
-        <div class="txt-container">
-          <img src="github.png" alt="" height="30px" />
-          <a href="https://github.com/Ryuuen8?tab=repositories">Bryan</a>
-        </div>
-      </div>
-        <div class="Project-text">
-          <h1>Projects</h1>
-        </div>
-        <div class="project-container">
-          <div class="project-1">
-            <img src="eye.png" alt="" />
-            <h2>EyeEase</h2>
+      <div class="card-wrapper">
+        <div class="card-container">
+          <div class="img-property">
+            <img src="wth.png" alt="" />
           </div>
-          <div class="project-2">
-            <img src="m-icon.png" alt="" />
-            <h2>Memory Game</h2>
+          <div class="txt-position">
+            <div class="txt-container">
+              <img src="github.png" alt="" height="30px" />
+              <a href="https://github.com/Ryuuen8?tab=repositories">Bryan</a>
+            </div>
+          </div>
+          <div class="Project-text">
+            <h1>Projects</h1>
+          </div>
+          <div class="project-container">
+            <div class="project-1">
+              <img src="eye.png" alt="" />
+              <h2>EyeEase</h2>
+            </div>
+
+            <div class="project-2">
+              <img src="m-icon.png" alt="" />
+              <h2>Memory Game</h2>
+            </div>
           </div>
         </div>
       </div>
@@ -120,9 +121,51 @@
       <div class="background-glow glow-1"></div>
       <div class="background-glow glow-2"></div>
       <div class="background-glow glow-3"></div>
-      <div class="card-container">
-        <h1>Contact Me</h1>
-        <p>Let's work together! Reach out via email or LinkedIn.</p>
+      <div class="contact-wrapper">
+        <div class="contact-card">
+          <div class="txt1-wrapper">
+            <h1>Contact Me</h1>
+          </div>
+          <div class="input-wrapper">
+            <div class="input-form">
+              <label for="Email">Email:</label>
+              <input type="email" name="Email" required><br>
+              <label for="Name">Name:</label>
+              <input type="text" name="Name" required><br>
+              <label for="Content">Content:</label>
+              <textarea class="textarea"  name="Content" id=""></textarea>
+              <button type="submit" class="sm-btn">Submit</button>
+            </div>
+            <div class="alternate">
+              <ul style="list-style: none;">
+                <li>
+                <a href="https://github.com/Ryuuen8?tab=repositories" class="github-btn">
+                  <i class="fab fa-github"></i> 
+                  <span class="text">Github</span>
+                </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/bryan.sabrido.5/" class="fb-btn">
+                    <i class="fab fa-facebook"></i>
+                    <span class="text">Facebook</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://discordapp.com/users/285335465110798339" class="dc-btn">
+                    <i class="fab fa-discord"></i>
+                    <span class="text">Discord</span>
+                  </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/bryan-sabrido-55a88a352/ " class="li-btn">
+                  <i class="fab fa-linkedin"></i>
+                  <span class="text">LinkedIn</span>
+                </a>
+              </li>
+                </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 

@@ -1,5 +1,5 @@
+
 $(document).ready(function() {
-    // Smooth scrolling for navbar links
     $("a").on("click", function(event) {
         if (this.hash !== "") {
             event.preventDefault();
@@ -22,3 +22,4 @@ $(document).ready(function() {
         });
     });
 });
+
