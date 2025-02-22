@@ -5,12 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
     <link rel="stylesheet" href="portfolio.css" />
-    <link rel="icon" href="allen.png" type="image/x-icon">
+    <link rel="icon" href="allen.png" type="image/x-icon" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
     <script src="portfolio.js"></script>
+    <script src="three.r134.min.js"></script>
+    <script src="vanta.halo.min.js"></script>
+    <script>
+      VANTA.HALO({
+        el: "#about-sec",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+      });
+    </script>
   </head>
   <body>
     <div class="background-glow glow-1"></div>
@@ -34,10 +46,10 @@
         <h1>Hi, I'm Bryan</h1>
         <h2>Aspiring Back End Developer</h2>
         <p>
-          "Hi, I'm Bryan, an aspiring Back-End Developer passionate about 
-          building efficient systems. I specialize in databases, APIs, and 
-          server-side logic.My goal is to create secure, high-performance applications 
-          that solve real-world problems."
+          "Hi, I'm Bryan, an aspiring Back-End Developer passionate about
+          building efficient systems. I specialize in databases, APIs, and
+          server-side logic.My goal is to create secure, high-performance
+          applications that solve real-world problems."
         </p>
       </div>
     </section>
@@ -50,18 +62,16 @@
         <div class="about-text">
           <h1>About Me</h1>
           <p>
-            Hello! I'm Bryan, a Aspiring
-            backend developer with a passion for creating
-            efficient and scalable web applications. With a pretty 
-            good foundation in information technology and with some
-            hands-on experience with a variety of technologies.
-            I Thrive on solving complex problesm and delivers impactful
-            solutions.
+            Hello! I'm Bryan, a Aspiring backend developer with a passion for
+            creating efficient and scalable web applications. With a pretty good
+            foundation in information technology and with some hands-on
+            experience with a variety of technologies. I Thrive on solving
+            complex problesm and delivers impactful solutions.
           </p>
           <p>
-            I specialize in building backend systems, optimizing
-            server-side peformance. I'm always eager to learn and grow, keeping
-            up with industry trends and best practices.
+            I specialize in building backend systems, optimizing server-side
+            peformance. I'm always eager to learn and grow, keeping up with
+            industry trends and best practices.
           </p>
         </div>
         <div class="about-skills">
@@ -82,22 +92,24 @@
       <div class="background-glow glow-3"></div>
       <div class="card-container">
         <div class="img-property">
-          <img src="wth.png" alt="">
+          <img src="wth.png" alt="" />
         </div>
+        <div class="txt-position">
         <div class="txt-container">
-        <img src="github.png" alt="" height="30px">
-        <a href="https://github.com/Ryuuen8?tab=repositories">Bryan</a>
+          <img src="github.png" alt="" height="30px" />
+          <a href="https://github.com/Ryuuen8?tab=repositories">Bryan</a>
         </div>
+      </div>
         <div class="Project-text">
           <h1>Projects</h1>
         </div>
         <div class="project-container">
           <div class="project-1">
-            <img src="eye.png" alt="" >
+            <img src="eye.png" alt="" />
             <h2>EyeEase</h2>
           </div>
           <div class="project-2">
-            <img src="m-icon.png" alt="">
+            <img src="m-icon.png" alt="" />
             <h2>Memory Game</h2>
           </div>
         </div>

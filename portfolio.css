@@ -47,7 +47,7 @@ body {
   background: linear-gradient(135deg, #0f172a, #1e293b);
   color: white;
   scroll-snap-type: y mandatory;
-  overflow-x: hidden; /* Prevents horizontal scrolling issues */
+  overflow-x: hidden; 
 }
 
 /* Background Glow */
@@ -57,7 +57,7 @@ body {
   height: 300px;
   background: radial-gradient(circle, rgba(255, 0, 150, 0.3), transparent);
   filter: blur(120px);
-  animation: float 6s infinite alternate ease-in-out;
+  animation: float 1s infinite alternate ease-in-out;
   z-index: -1;
   transform: translate(-50%, -50%);
 }
@@ -110,6 +110,10 @@ section {
 
 /* About Me Section */
 #aboutSec {
+  background-image: url('png.png');
+  background-position: 1400px;
+  background-size: 600px;
+  background-repeat: no-repeat;
   padding: 40px;
 }
 
@@ -182,7 +186,7 @@ section {
 /* Blog Card */
 .card-container {
   height: 80vh;
-  width: 75vh;
+  width:  810px;
   padding: 30px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 12px;
@@ -192,11 +196,11 @@ section {
 }
 
 .card-container .img-property {
-  height: 35%;
+  height: 25vh;
   display: flex;
   justify-content: center;
-  align-items: center;
   position: relative;
+  align-items: center;
   overflow: hidden;
 }
 
@@ -215,12 +219,14 @@ section {
   box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
 }
 
-.txt-container {
+.txt-position {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  margin-left: 160px;
+}
+
+.txt-container {
+  position: relative; 
   padding: 10px;
   width: 50%;
   background: rgba(255, 255, 255, 0.1);
@@ -245,9 +251,9 @@ section {
 }
 
 .project-container {
-  gap: 20px;
-  margin-top: 20px;
-  display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    display: flex;
 }
 .card-container .Project-text {
   margin-top: 20px;
@@ -262,7 +268,8 @@ section {
   border-radius: 12px;
   backdrop-filter: blur(8px);
   box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: transform 1s;
+  transform-style: preserve-3d;
 }
 
 .project-container .project-1:hover {
